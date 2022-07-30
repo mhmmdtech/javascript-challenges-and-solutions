@@ -1,0 +1,506 @@
+@use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as mixins;
+.tl-intro {
+  @include mixins.element(side-blog-wrapper) {
+    position: static;
+    margin: 22px 0 0 16px;
+    padding: 0 10px 0 15px;
+    width: auto;
+    right: 137px;
+    &::before {
+      content: ' ';
+      display: block;
+      width: 5px;
+      background: rgba(variables.$light-blue, 0.75);
+      border-radius: 5px;
+      overflow: hidden;
+      flex: 0 0 auto;
+      margin: 0 17px 0 0;
+    }
+    @include mixins.breakpoint(992px) {
+      position: absolute;
+      margin: 20px 0 17px 26px;
+      padding: 5px 17px 5px 0;
+      width: 200px;
+      &::before {
+        width: calc(0.4rem + 0.125vw);
+        border-radius: calc(0.4rem + 0.2vw);
+        margin: 0 calc(1.5rem + 0.25vw) 0 0;
+      }
+    }
+    @include mixins.breakpoint(1400px) {
+      width: calc(20rem + 5vw);
+    }
+  }
+  @include mixins.element(side-blog-header) {
+    font-size: 16px;
+    color: variables.$light-blue;
+    font-weight: 700;
+    margin-bottom: 15px;
+    @include mixins.breakpoint(992px) {
+      font-size: calc(1rem + 0.5vw);
+      margin-bottom: calc(0.8rem + 0.4vw);
+    }
+    @include mixins.attention {
+      text-decoration: underline;
+    }
+  }
+  @include mixins.element(side-blog-date) {
+    color: #444;
+    font-size: 13px;
+    font-weight: 700;
+    @include mixins.breakpoint(1400px) {
+      color: #000000;
+      font-size: calc(0.8rem + 0.4vw);
+    }
+  }
+  @include mixins.element(side-blog-title) {
+    color: variables.$light-blue;
+    font-size: 14px;
+    margin-top: calc(0.1rem + 0.1vw);
+    font-weight: 400;
+    @include mixins.breakpoint(1400px) {
+      font-size: calc(0.9rem + 0.45vw);
+    }
+    @include mixins.attention {
+      text-decoration: underline;
+    }
+  }
+  @include mixins.element(logo-wrapper) {
+    max-width: 400px;
+    padding: 20px 0 20px;
+  }
+  @include mixins.element(logo-icon) {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: -5px auto;
+    animation: 500ms steps(30) both;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &.play {
+      animation-name: t-logo-play;
+    }
+    @include mixins.breakpoint(480px) {
+      width: 144px;
+      height: 144px;
+      margin: -8px auto;
+    }
+    @include mixins.breakpoint(1400px) {
+      width: calc(12rem + 3vw);
+      height: calc(12rem + 3vw);
+    }
+  }
+  @include mixins.element(logo-title) {
+    width: 66px;
+    height: 24px;
+    margin: 18px auto 6px;
+    @include mixins.breakpoint(480px) {
+      width: 144px;
+      height: 36px;
+    }
+    @include mixins.breakpoint(1400px) {
+      width: calc(12rem + 3vw);
+      height: calc(3rem + 1vw);
+    }
+  }
+  @include mixins.element(logo-message) {
+    font-size: 16px;
+    max-width: 224px;
+    line-height: 148%;
+    color: #8c8c8c;
+    text-align: center;
+    padding: 1px 0 10px;
+    font-weight: 400;
+    @include mixins.breakpoint(480px) {
+      font-size: 20px;
+      max-width: 285px;
+    }
+    @include mixins.breakpoint(1400px) {
+      max-width: calc(30rem + 3vw);
+      font-size: calc(1.5rem + 0.5vw);
+    }
+  }
+}
+@keyframes t-logo-play {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 0%;
+  }
+}
+.tl-apps {
+  margin: calc(4rem + 2vw) 0 0 0;
+}
+.tl-download-mobile-wrapper {
+  max-width: 1028px;
+  padding: 0 20px;
+  @include mixins.breakpoint(640px) {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+.tl-downloads {
+  @include mixins.element(item) {
+    display: flex;
+    margin: 20px 0 30px 0;
+    color: variables.$light-blue;
+    font-size: 16px;
+    &.video_play .tl-downloads__item-video {
+      opacity: 1;
+    }
+    svg {
+      width: 25px;
+      height: 27px;
+      margin-right: 10px;
+      fill: variables.$light-blue;
+    }
+    @include mixins.modifier(android) {
+      .tl-downloads__item-img {
+        min-width: 304px;
+        min-height: 240px;
+        width: 304px;
+        height: 240px;
+        margin-bottom: 10px;
+        @include mixins.breakpoint(1400px) {
+          margin-bottom: calc(1rem + 0.5vw);
+        }
+      }
+      @include mixins.breakpoint(1400px) {
+        padding: 0 70px;
+      }
+    }
+    @include mixins.modifier(ios) {
+      .tl-downloads__item-img {
+        min-width: 248px;
+        min-height: 198px;
+        width: 248px;
+        height: 198px;
+        background-image: url(../../assets/images/thumbnail/SiteiOS.jpg);
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        background-size: 360px 220px;
+        margin-bottom: 10px;
+        @include mixins.breakpoint(640px) {
+          min-width: 304px;
+          min-height: 240px;
+          width: 304px;
+          height: 240px;
+          background-size: unset;
+        }
+        @include mixins.breakpoint(1400px) {
+          margin-bottom: calc(1rem + 0.5vw);
+        }
+      }
+      @include mixins.breakpoint(640px) {
+        padding: 0 70px;
+      }
+    }
+    @include mixins.modifier(desktop) {
+      img {
+        min-width: 320px;
+        min-height: 156px;
+        width: 320px;
+        height: 156px;
+      }
+      @include mixins.breakpoint(640px) {
+        display: none;
+      }
+    }
+    @include mixins.breakpoint(640px) {
+      margin: 40px 0;
+      p {
+        margin-bottom: 10px;
+      }
+      &::after {
+        content: '';
+        display: block;
+        height: 3px;
+        background: rgba(variables.$light-blue, 0.75);
+        position: absolute;
+        border-radius: 4px;
+        left: 4px;
+        right: 4px;
+        opacity: 0;
+        bottom: 0px;
+        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+        transform-origin: bottom;
+        transform: scaleX(0.3) scaleY(0);
+      }
+      @include mixins.attention {
+        &::after {
+          opacity: 1;
+          transform: scaleX(1) scaleY(1);
+        }
+      }
+    }
+    @include mixins.breakpoint(1400px) {
+      font-size: calc(1.2rem + 0.6vw);
+      svg {
+        width: calc(2.5rem + 0.5vw);
+        height: calc(2.5rem + 0.5vw);
+      }
+      &::after {
+        height: calc(0.2rem + 0.05vw);
+      }
+    }
+  }
+  @include mixins.element(item-video) {
+    position: absolute;
+    opacity: 0;
+    @include mixins.modifier(android) {
+      min-width: 304px;
+      min-height: 240px;
+      width: 304px;
+      height: 240px;
+      margin-bottom: 10px;
+      @include mixins.breakpoint(1400px) {
+        margin-bottom: calc(1rem + 0.5vw);
+      }
+    }
+    @include mixins.modifier(ios) {
+      min-width: 248px;
+      min-height: 198px;
+      width: 248px;
+      height: 198px;
+      margin-bottom: 10px;
+      @include mixins.breakpoint(640px) {
+        min-width: 304px;
+        min-height: 240px;
+        width: 304px;
+        height: 240px;
+      }
+      @include mixins.breakpoint(1400px) {
+        margin-bottom: calc(1rem + 0.5vw);
+      }
+    }
+  }
+  @include mixins.element(more-btn) {
+    color: variables.$light-blue;
+    margin: 5px 0 0 0;
+    background-image: none;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #318fd3;
+    border-radius: 4px;
+    svg {
+      width: 15px;
+      height: 15px;
+      margin-left: 10px;
+    }
+    @include mixins.breakpoint(640px) {
+      display: none;
+    }
+  }
+  @include mixins.element(desktop) {
+    min-width: 640px;
+  }
+  @include mixins.element(desktop-links) {
+    width: 595px;
+    margin: 0 auto;
+    height: 100%;
+  }
+  @include mixins.element(desktop-link) {
+    padding: 270px 0 20px;
+    font-size: 16px;
+    vertical-align: top;
+    float: left;
+    color: variables.$light-blue;
+    @include mixins.modifier(win) {
+      width: 52%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include mixins.modifier(mac) {
+      width: 48%;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 4px;
+      right: 4px;
+      width: 100%;
+      height: 3px;
+      display: block;
+      background: rgba(variables.$light-blue, 0.75);
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+      transform-origin: bottom;
+      transform: scaleX(0.3) scaleY(0);
+    }
+    @include mixins.attention {
+      &::after {
+        opacity: 1;
+        transform: scaleX(1) scaleY(1);
+      }
+    }
+    @include mixins.breakpoint(1400px) {
+      font-size: calc(1.2rem + 0.6vw);
+      &::after {
+        height: calc(0.2rem + 0.05vw);
+      }
+    }
+  }
+}
+.tl-download-desktop-wrapper {
+  display: none;
+  @include mixins.breakpoint(640px) {
+    display: block;
+    height: 315px;
+  }
+  @include mixins.breakpoint(1400px) {
+    height: calc(30rem + 4vw);
+  }
+}
+.tl-news {
+  max-width: 800px;
+  margin: calc(5rem + 1vw) auto calc(1.8rem + 0.9vw) auto;
+  @include mixins.element(title) {
+    font-size: 23px;
+    font-weight: 500;
+    @include mixins.breakpoint(1400px) {
+      font-size: calc(1.8rem + 0.9vw);
+    }
+  }
+  @include mixins.element(title-link) {
+    color: variables.$light-blue;
+    @include mixins.breakpoint(640px) {
+      @include mixins.attention {
+        text-decoration: underline;
+      }
+    }
+  }
+  @include mixins.element(cards) {
+    display: flex;
+    flex-direction: column;
+    @include mixins.breakpoint(640px) {
+      flex-direction: row;
+    }
+  }
+  @include mixins.element(card) {
+    max-width: 100%;
+    margin: 20px;
+    @include mixins.breakpoint(640px) {
+      width: 50%;
+    }
+    @include mixins.breakpoint(1400px) {
+      margin: calc(1.8rem + 0.9vw);
+    }
+    @include mixins.attention {
+      .tl-news__card-title {
+        text-decoration: underline;
+      }
+    }
+  }
+  @include mixins.element(card-cover) {
+    max-width: 100%;
+    height: auto;
+    max-height: 220px;
+    @include mixins.breakpoint(1400px) {
+      max-height: calc(20rem + 5vw);
+    }
+  }
+  @include mixins.element(card-title) {
+    margin: calc(1rem + 0.25vw) 0 calc(0.2rem + 0.01vw) 0;
+    padding: 0 calc(1rem + 0.25vw);
+    font-size: 16px;
+    color: variables.$light-blue;
+    line-height: 160%;
+    @include mixins.breakpoint(1400px) {
+      font-size: calc(1.4rem + 0.7vw);
+    }
+  }
+  @include mixins.element(card-description) {
+    color: #333;
+    font-size: 14px;
+    line-height: 160%;
+    padding: 0 calc(1rem + 0.25vw);
+    @include mixins.breakpoint(1400px) {
+      font-size: calc(1.2rem + 0.6vw);
+    }
+  }
+  @include mixins.element(card-date) {
+    margin-top: calc(0.2rem + 0.01vw);
+    font-size: 14px;
+    color: #888;
+    padding: 0 calc(1rem + 0.25vw);
+    @include mixins.breakpoint(1400px) {
+      font-size: calc(1rem + 0.5vw);
+    }
+  }
+  @include mixins.breakpoint(1400px) {
+    max-width: 1200px;
+  }
+}
+.tl-options {
+  margin: calc(1.8rem + 0.9vw) 0 0 0;
+  & > h3 {
+    color: #222222;
+  }
+  @include mixins.element(boxes) {
+    max-width: 950px;
+    margin: calc(1.5rem + 0.25vw) auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include mixins.breakpoint(1400px) {
+      max-width: 1400px;
+    }
+  }
+  @include mixins.element(box) {
+    position: relative;
+    padding: 0 calc(1rem + 0.25vw);
+    flex: 0 1 auto;
+    width: 100%;
+    @include mixins.breakpoint(768px) {
+      width: 50%;
+    }
+    @include mixins.breakpoint(992px) {
+      width: 33.33333%;
+    }
+  }
+  @include mixins.element(box-wrapper) {
+    max-width: 260px;
+    padding: 20px 0 10px;
+    @include mixins.breakpoint(1400px) {
+      max-width: calc(25rem + 2.5vw);
+      padding: calc(1.6rem + 0.8vw) 0 calc(0.8rem + 0.2vw);
+    }
+  }
+  @include mixins.element(box-sticker) {
+    max-width: 160px;
+    width: 100%;
+    @include mixins.breakpoint(1400px) {
+      width: calc(20rem + 2vw);
+    }
+  }
+  @include mixins.element(box-title) {
+    color: variables.$light-blue;
+    margin: 15px 0 6px;
+    font-size: calc(2rem + 0.2vw);
+    font-weight: 400;
+    @include mixins.breakpoint(1400px) {
+      font-size: calc(1.6rem + 0.8vw);
+    }
+  }
+  @include mixins.element(box-description) {
+    font-size: 15px;
+    line-height: 158%;
+    @include mixins.breakpoint(1400px) {
+      font-size: calc(1rem + 0.5vw);
+    }
+    a {
+      color: variables.$light-blue;
+      text-decoration: none;
+      @include mixins.attention {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+@use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as mixins;
+.landing-header {
+  min-height: 48px;
+  background-color: rgba(variables.$body-bg, 0.8);
+  backdrop-filter: blur(25px) saturate(180%);
+  border-bottom: 1px solid variables.$border-color;
+  @include mixins.breakpoint(1400px) {
+    min-height: calc(4rem + 1.5vw);
+    border-bottom: calc(1px + 0.1vw) solid variables.$border-color;
+  }
+}
+.landing-navbar {
+  @include mixins.breakpoint(480px) {
+    padding: 0 calc(1rem + 0.5vw);
+  }
+  @include mixins.breakpoint(768px) {
+    width: 750px;
+  }
+  @include mixins.breakpoint(992px) {
+    width: 970px;
+  }
+  @include mixins.breakpoint(1200px) {
+    width: 1170px;
+  }
+  @include mixins.breakpoint(1400px) {
+    width: calc(100rem + 25vw);
+    padding: 0 calc(1.5rem + 0.5vw);
+  }
+  @include mixins.element(item) {
+    @include mixins.modifier(hidden-in-small) {
+      display: none;
+      @include mixins.breakpoint(768px) {
+        display: block;
+      }
+    }
+    &:not(.active) {
+      .landing-navbar__link {
+        &::after {
+          opacity: 0;
+          transform-origin: bottom;
+          transform: scaleX(0.3) scaleY(0);
+          transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+        }
+        @include mixins.attention {
+          &::after {
+            opacity: 1;
+            transform: scaleX(1) scaleY(1);
+          }
+        }
+      }
+    }
+  }
+  @include mixins.element(link) {
+    height: 48px;
+    padding: 0 calc(1rem + 0.5vw);
+    font-size: 1.6rem;
+    color: variables.$light-blue;
+    & > svg {
+      width: calc(1.5rem + 0.5vw);
+      height: calc(1.5rem + 0.5vw);
+      margin-right: 0.5rem;
+      fill: variables.$light-blue;
+    }
+    & > .chevron-down {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 8px;
+      vertical-align: middle;
+      border-top: 4px solid;
+      border-right: 4px solid transparent;
+      border-left: 4px solid transparent;
+    }
+    &::after {
+      content: '';
+      width: 90%;
+      height: 3px;
+      display: block;
+      background-color: rgba(variables.$light-blue, 0.75);
+      position: absolute;
+      bottom: 0;
+      border-radius: calc(1rem + 0.5vw) calc(1rem + 0.5vw) 0 0;
+    }
+    @include mixins.breakpoint(1400px) {
+      min-height: calc(4rem + 1.5vw);
+      padding: 0 calc(1.5rem + 0.75vw);
+      font-size: calc(1rem + 0.5vw);
+      & > svg {
+        width: calc(1.5rem + 0.75vw);
+        height: calc(1.5rem + 0.75vw);
+        margin-right: calc(0.5rem + 0.25vw);
+      }
+      & > .chevron-down {
+        border-top: calc(2px + 0.2vw) solid;
+        border-right: calc(2px + 0.2vw) solid transparent;
+        border-left: calc(2px + 0.2vw) solid transparent;
+      }
+      &::after {
+        height: calc(0.2rem + 0.1vw);
+      }
+    }
+  }
+  @include mixins.element(dropdown) {
+    width: 280px;
+    min-width: 280px;
+    border-radius: 8px;
+    padding: 14px;
+    right: 0;
+    left: auto;
+    margin-top: 4px;
+    box-shadow: 1px 1px 3px 1px rgb(0 0 0 / 10%);
+    border: 1px solid variables.$border-color;
+    background-color: variables.$body-bg;
+    z-index: 100;
+    transform-origin: top right;
+    transform: scaleX(0.15) scaleY(0.15);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform ease-in-out 0.15s, opacity ease-out 0.15s;
+    &.open {
+      transform: scaleX(1) scaleY(1);
+      opacity: 1;
+      pointer-events: all;
+    }
+    @include mixins.breakpoint(1400px) {
+      width: calc(25rem + 5vw);
+      min-width: calc(25rem + 5vw);
+      border-radius: calc(0.3rem + 0.15vw);
+    }
+  }
+  @include mixins.element(dropdown-item) {
+    width: 125px;
+    flex-grow: 1;
+    .landing-navbar__dropdown-link {
+      font-size: 13px;
+    }
+    &.long {
+      .landing-navbar__dropdown-link {
+        font-size: 12px;
+      }
+    }
+    &.chosen {
+      .landing-navbar__dropdown-link {
+        color: variables.$black-bg;
+        background-color: variables.$body-bg;
+      }
+    }
+    @include mixins.breakpoint(1400px) {
+      .landing-navbar__dropdown-link {
+        font-size: calc(1rem + 0.5vw);
+      }
+      &.long {
+        .landing-navbar__dropdown-link {
+          font-size: calc(0.9rem + 0.45vw);
+        }
+      }
+    }
+  }
+  @include mixins.element(dropdown-link) {
+    color: variables.$light-blue;
+    padding: 9px 10px;
+    border-radius: 4px;
+    @include mixins.attention {
+      background-color: rgba(variables.$light-blue, 0.1);
+    }
+    @include mixins.breakpoint(1400px) {
+      padding: calc(0.8rem + 0.4vw);
+      border-radius: calc(0.3rem + 0.15vw);
+    }
+  }
+}

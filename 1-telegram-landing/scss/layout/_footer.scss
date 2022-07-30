@@ -1,0 +1,98 @@
+@use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as mixins;
+.landing-footer {
+  border-top: 1px solid variables.$border-color;
+  max-width: 925px;
+  margin: calc(4rem + 1vw) auto 0 auto;
+  padding: 16px 0;
+  @include mixins.breakpoint(992px) {
+    padding: 28px 0;
+  }
+  @include mixins.element(mobile-wrapper) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include mixins.breakpoint(992px) {
+      display: none;
+    }
+  }
+  @include mixins.element(mobile-item) {
+    font-size: 14px;
+    margin: 0 6px;
+    font-weight: 400;
+  }
+  @include mixins.element(mobile-link) {
+    color: variables.$light-blue;
+    @include mixins.attention {
+      text-decoration: underline;
+    }
+  }
+  @include mixins.element(desktop-wrapper) {
+    display: none;
+    @include mixins.breakpoint(992px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-content: stretch;
+      align-items: stretch;
+      margin: 0 auto;
+      max-width: 800px;
+      padding-left: 0;
+      min-height: 100px;
+      height: auto;
+    }
+    @include mixins.breakpoint(1750px) {
+      max-width: 1200px;
+      min-height: 150px;
+    }
+  }
+  @include mixins.element(desktop-column) {
+    flex: 0 1 auto;
+    align-self: auto;
+    @include mixins.modifier(about) {
+      flex: 0 1 290px;
+      @include mixins.breakpoint(1750px) {
+        flex: 0 1 320px;
+      }
+    }
+  }
+  @include mixins.element(desktop-item-title) {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    & > a {
+      color: variables.$light-black;
+      text-decoration: none;
+      @include mixins.attention {
+        text-decoration: underline;
+      }
+    }
+    @include mixins.breakpoint(1750px) {
+      font-size: calc(1.5rem + 0.25vw);
+    }
+  }
+  @include mixins.element(desktop-item-description) {
+    font-size: 14px;
+    line-height: 23px;
+    @include mixins.breakpoint(1750px) {
+      font-size: calc(1rem + 0.4vw);
+      line-height: calc(2rem + 0.5vw);
+    }
+  }
+  @include mixins.element(desktop-item-cell) {
+    font-size: 14px;
+    line-height: 23px;
+    & > a {
+      color: variables.$light-blue;
+      text-decoration: none;
+      @include mixins.attention {
+        text-decoration: underline;
+      }
+    }
+    @include mixins.breakpoint(1750px) {
+      font-size: calc(1rem + 0.4vw);
+      line-height: calc(2rem + 0.5vw);
+    }
+  }
+}
