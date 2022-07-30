@@ -1,0 +1,9 @@
+@use '../abstracts/mixins' as mixins;
+.app-landing {
+  @include mixins.breakpoint(768px) {
+    margin-top: 74px;
+  }
+  @include mixins.breakpoint(1024px) {
+    margin-top: 91px;
+  }
+}

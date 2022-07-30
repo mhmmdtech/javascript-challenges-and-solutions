@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp</title>
+    <meta
+      name="description"
+      content="WhatsApp Messenger: More than 2 billion people in over 180 countries use WhatsApp to stay in touch with friends and family, anytime and anywhere. WhatsApp is free and offers simple, secure, reliable messaging and calling, available on phones all over the world."
+    />
+    <link
+      rel="shortcut icon"
+      href="https://static.whatsapp.net/rsrc.php/v3/yP/r/rYZqPCBaG70.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/main.css" />
+    <script defer src="./scripts/utils/helpers.js"></script>
+    <script defer src="./scripts/components/ModalHandler.js"></script>
+    <script defer src="./scripts/components/SidebarNavigation.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__banner-wrapper">
+          <span class="header__desktop-banner">
+            <img
+              alt="WhatsApp Main Page"
+              src="https://static.whatsapp.net/rsrc.php/ym/r/36B424nhiL4.svg"
+            />
+          </span>
+          <span class="header__banner">
+            <a href="javascript:void(0)" class="header__banner-link">
+              <img
+                alt="WhatsApp Main Page"
+                src="https://static.whatsapp.net/rsrc.php/yz/r/lOol7j-zq4u.svg"
+              />
+            </a>
+          </span>
+        </div>
+        <div class="header__navs-wrapper">
+          <nav class="header__desktop-nav">
+            <a href="javascript:void(0)">
+              <h5>WHATSAPP WEB</h5>
+            </a>
+            <a href="javascript:void(0)">
+              <h5>FEATURES</h5>
+            </a>
+            <a href="javascript:void(0)">
+              <h5>DOWNLOAD</h5>
+            </a>
+            <a href="javascript:void(0)">
+              <h5>SECURITY</h5>
+            </a>
+            <a href="javascript:void(0)">
+              <h5>HELP CENTER</h5>
+            </a>
+          </nav>
+          <div class="header__desktop-lang-wrapper" data-modal>
+            <button class="header__desktop-lang-toggler" data-modal-toggler>
+              <svg>
+                <use
+                  xlink:href="./assets/icons/sprites/app-sprites.svg#universe"
+                ></use>
+              </svg>
+              <h5>EN</h5>
+              <svg>
+                <use
+                  xlink:href="./assets/icons/sprites/app-sprites.svg#arrow-up"
+                ></use>
+              </svg>
+            </button>
+            <div class="header__desktop-langs-box" data-modal-menu>
+              <div class="header__desktop-langs">
+                <div class="row">
+                  <h3>Select your language</h3>
+                  <button data-modal-toggler>
+                    <svg>
+                      <use
+                        xlink:href="./assets/icons/sprites/app-sprites.svg#arrow-up"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="header__desktop-langs-list">
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=az" dir="auto"
+                      ><h4>azərbaycan</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=af" dir="auto"
+                      ><h4>Afrikaans</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=id" dir="auto"
+                      ><h4>Bahasa Indonesia</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=ms" dir="auto"
+                      ><h4>Melayu</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=ca" dir="auto"
+                      ><h4>català</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=cs" dir="auto"
+                      ><h4>čeština</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=da" dir="auto"
+                      ><h4>dansk</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=de" dir="auto"
+                      ><h4>Deutsch</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=et" dir="auto"
+                      ><h4>eesti</h4></a
+                    >
+                  </li>
+                  <li class="active">
+                    <a href="https://www.whatsapp.com/?lang=en" dir="auto"
+                      ><h4>English</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=es" dir="auto"
+                      ><h4>español</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=fr" dir="auto"
+                      ><h4>français</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=ga" dir="auto"
+                      ><h4>Gaeilge</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=hr" dir="auto"
+                      ><h4>hrvatski</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=it" dir="auto"
+                      ><h4>italiano</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=sw" dir="auto"
+                      ><h4>Kiswahili</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=lv" dir="auto"
+                      ><h4>latviešu</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=lt" dir="auto"
+                      ><h4>lietuvių</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=hu" dir="auto"
+                      ><h4>magyar</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=nl" dir="auto"
+                      ><h4>Nederlands</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=nb" dir="auto"
+                      ><h4>norsk bokmål</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=uz" dir="auto"
+                      ><h4>o‘zbek</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=tl" dir="auto"
+                      ><h4>Filipino</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=pl" dir="auto"
+                      ><h4>polski</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=pt_br" dir="auto"
+                      ><h4>Português (Brasil)</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=pt_pt" dir="auto"
+                      ><h4>Português (Portugal)</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=ro" dir="auto"
+                      ><h4>română</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=sq" dir="auto"
+                      ><h4>shqip</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=sk" dir="auto"
+                      ><h4>slovenčina</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=sl" dir="auto"
+                      ><h4>slovenščina</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=fi" dir="auto"
+                      ><h4>suomi</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=sv" dir="auto"
+                      ><h4>svenska</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=vi" dir="auto"
+                      ><h4>Tiếng Việt</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=tr" dir="auto"
+                      ><h4>Türkçe</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=el" dir="auto"
+                      ><h4>Ελληνικά</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=bg" dir="auto"
+                      ><h4>български</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=kk" dir="auto"
+                      ><h4>қазақ тілі</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=mk" dir="auto"
+                      ><h4>македонски</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=ru" dir="auto"
+                      ><h4>русский</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=sr" dir="auto"
+                      ><h4>српски</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=uk" dir="auto"
+                      ><h4>українська</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=he" dir="auto"
+                      ><h4>עברית</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=ar" dir="auto"
+                      ><h4>العربية</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=fa" dir="auto"
+                      ><h4>فارسی</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=ur" dir="auto"
+                      ><h4>اردو</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=bn" dir="auto"
+                      ><h4>বাংলা</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=hi" dir="auto"
+                      ><h4>हिन्दी</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=gu" dir="auto"
+                      ><h4>ગુજરાતી</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=kn" dir="auto"
+                      ><h4>ಕನ್ನಡ</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=mr" dir="auto"
+                      ><h4>मराठी</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=pa" dir="auto"
+                      ><h4>ਪੰਜਾਬੀ</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=ta" dir="auto"
+                      ><h4>தமிழ்</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=te" dir="auto"
+                      ><h4>తెలుగు</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=ml" dir="auto"
+                      ><h4>മലയാളം</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=th" dir="auto"
+                      ><h4>ไทย</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=zh_cn" dir="auto"
+                      ><h4>简体中文</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=zh_tw" dir="auto"
+                      ><h4>繁體中文（台灣）</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=zh_hk" dir="auto"
+                      ><h4>繁體中文（香港）</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=ja" dir="auto"
+                      ><h4>日本語</h4></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.whatsapp.com/?lang=ko" dir="auto"
+                      ><h4>한국어</h4></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="header__desktop-langs-backdrop"
+                data-modal-toggler
+              ></div>
+            </div>
+          </div>
+          <div class="header__sidenav-wrapper" data-sidebarNav>
+            <button class="header__sidenav-opener" data-sidebarNav-toggler>
+              <svg>
+                <use
+                  xlink:href="./assets/icons/sprites/app-sprites.svg#hamburger-menu"
+                ></use>
+              </svg>
+            </button>
+            <nav class="header__sidenav" data-sidebarNav-menu>
+              <svg
+                width="36"
+                height="36"
+                fill="none"
+                class="header__sidenav-logo"
+              >
+                <path
+                  d="M1.757 34.14l2.304-8.394a16.177 16.177 0 01-2.167-8.087c0-8.923 7.268-16.192 16.191-16.192 4.334 0 8.395 1.69 11.466 4.743a16.109 16.109 0 014.743 11.449c0 8.923-7.268 16.191-16.192 16.191-2.712 0-5.374-.682-7.746-1.979l-8.599 2.27z"
+                  fill="url(#1_paint0_linear)"
+                ></path>
+                <path fill="url(#1_pattern0)" d="M0 0h36v36H0z"></path>
+                <path
+                  d="M1.177 34.72l2.389-8.684a16.736 16.736 0 01-2.235-8.377C1.314 8.394 8.838.87 18.085.87c4.488 0 8.702 1.74 11.875 4.914a16.673 16.673 0 014.914 11.875c0 9.247-7.524 16.771-16.772 16.771-2.815 0-5.562-.7-8.019-2.047L1.177 34.72zm9.299-5.357l.512.307a13.955 13.955 0 007.097 1.945c7.678 0 13.94-6.261 13.94-13.94 0-3.719-1.45-7.233-4.078-9.86a13.89 13.89 0 00-9.862-4.096C10.39 3.72 4.13 9.981 4.13 17.66c0 2.627.734 5.204 2.133 7.422l.324.529-1.416 5.152 5.306-1.399z"
+                  fill="url(#1_paint1_linear)"
+                ></path>
+                <path
+                  fill="url(#1_pattern1)"
+                  d="M8.019 8.531h20.133v18.938H8.019z"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.905 10.63c-.307-.7-.648-.717-.938-.717-.256-.017-.53-.017-.82-.017-.272 0-.733.102-1.125.529-.393.426-1.467 1.433-1.467 3.497 0 2.065 1.501 4.061 1.706 4.334.204.273 2.9 4.64 7.166 6.33 3.548 1.399 4.265 1.126 5.033 1.04.767-.085 2.474-1.006 2.832-1.996.341-.972.341-1.825.239-1.996-.102-.17-.393-.273-.802-.495-.427-.204-2.474-1.228-2.866-1.365-.393-.136-.666-.204-.939.205-.273.427-1.075 1.365-1.33 1.638-.24.273-.495.307-.905.102-.426-.204-1.774-.648-3.378-2.081-1.246-1.11-2.082-2.491-2.338-2.9-.238-.427-.034-.649.188-.854.188-.187.427-.494.632-.733.204-.24.272-.427.426-.7.136-.273.068-.529-.034-.733-.103-.188-.904-2.253-1.28-3.089z"
+                  fill="#fff"
+                ></path>
+                <defs>
+                  <linearGradient
+                    id="1_paint0_linear"
+                    x1="18.022"
+                    y1="34.139"
+                    x2="18.022"
+                    y2="1.461"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#20B038"></stop>
+                    <stop offset="1" stop-color="#60D66A"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id="1_paint1_linear"
+                    x1="18.022"
+                    y1="34.724"
+                    x2="18.022"
+                    y2="0.875"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#F9F9F9"></stop>
+                    <stop offset="1" stop-color="#fff"></stop>
+                  </linearGradient>
+                  <pattern
+                    id="1_pattern0"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use xlink:href="#1_image0"></use>
+                  </pattern>
+                  <pattern
+                    id="1_pattern1"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use xlink:href="#1_image1"></use>
+                  </pattern>
+                  <image
+                    id="1_image0"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANMAAADTCAYAAAAbBybZAAAACXBIWXMAAAsSAAALEgHS3X78AAAA"
+                  ></image>
+                  <image
+                    id="1_image1"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHYAAABvCAYAAAA5fjRCAAAACXBIWXMAAAsSAAALEgHS3X78AAAA"
+                  ></image>
+                </defs>
+              </svg>
+              <button class="header__sidenav-closer" data-sidebarNav-toggler>
+                <svg>
+                  <use
+                    xlink:href="./assets/icons/sprites/app-sprites.svg#multiple"
+                  ></use>
+                </svg>
+              </button>
+              <ul class="header__sidenav-list">
+                <li class="header__sidenav-item">
+                  <h4>
+                    <a href="javascript:void(0)" class="header__sidenav-link">
+                      Download
+                    </a>
+                  </h4>
+                </li>
+                <li class="header__sidenav-item">
+                  <h4>
+                    <a href="javascript:void(0)" class="header__sidenav-link">
+                      Features
+                    </a>
+                  </h4>
+                </li>
+                <li class="header__sidenav-item">
+                  <h4>
+                    <a href="javascript:void(0)" class="header__sidenav-link">
+                      Security
+                    </a>
+                  </h4>
+                </li>
+                <li class="header__sidenav-item">
+                  <h4>
+                    <a href="javascript:void(0)" class="header__sidenav-link">
+                      Help Center
+                    </a>
+                  </h4>
+                </li>
+                <li class="header__sidenav-item">
+                  <h4>
+                    <a href="javascript:void(0)" class="header__sidenav-link">
+                      Get in Touch
+                    </a>
+                  </h4>
+                </li>
+                <li class="header__sidenav-lang-wrapper">
+                  <select class="header__sidenav-langs" aria-hidden="true">
+                    <option value="https://www.whatsapp.com/?lang=az">
+                      azərbaycan
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=af">
+                      Afrikaans
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=id">
+                      Bahasa Indonesia
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=ms">
+                      Melayu
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=ca">
+                      català
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=cs">
+                      čeština
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=da">
+                      dansk
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=de">
+                      Deutsch
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=et">
+                      eesti
+                    </option>
+                    <option
+                      value="https://www.whatsapp.com/?lang=en"
+                      selected="1"
+                    >
+                      English
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=es">
+                      español
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=fr">
+                      français
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=ga">
+                      Gaeilge
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=hr">
+                      hrvatski
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=it">
+                      italiano
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=sw">
+                      Kiswahili
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=lv">
+                      latviešu
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=lt">
+                      lietuvių
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=hu">
+                      magyar
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=nl">
+                      Nederlands
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=nb">
+                      norsk bokmål
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=uz">
+                      o‘zbek
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=tl">
+                      Filipino
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=pl">
+                      polski
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=pt_br">
+                      Português (Brasil)
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=pt_pt">
+                      Português (Portugal)
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=ro">
+                      română
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=sq">
+                      shqip
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=sk">
+                      slovenčina
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=sl">
+                      slovenščina
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=fi">
+                      suomi
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=sv">
+                      svenska
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=vi">
+                      Tiếng Việt
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=tr">
+                      Türkçe
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=el">
+                      Ελληνικά
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=bg">
+                      български
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=kk">
+                      қазақ тілі
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=mk">
+                      македонски
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=ru">
+                      русский
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=sr">
+                      српски
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=uk">
+                      українська
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=he">
+                      עברית
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=ar">
+                      العربية
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=fa">
+                      فارسی
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=ur">
+                      اردو
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=bn">
+                      বাংলা
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=hi">
+                      हिन्दी
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=gu">
+                      ગુજરાતી
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=kn">
+                      ಕನ್ನಡ
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=mr">
+                      मराठी
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=pa">
+                      ਪੰਜਾਬੀ
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=ta">
+                      தமிழ்
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=te">
+                      తెలుగు
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=ml">
+                      മലയാളം
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=th">
+                      ไทย
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=zh_cn">
+                      简体中文
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=zh_tw">
+                      繁體中文（台灣）
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=zh_hk">
+                      繁體中文（香港）
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=ja">
+                      日本語
+                    </option>
+                    <option value="https://www.whatsapp.com/?lang=ko">
+                      한국어
+                    </option>
+                  </select>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="app-landing">
+      <section class="app-intro">
+        <div>
+          <article class="app-intro__content">
+            <h2 class="slogan">Simple. Secure.</h2>
+            <h2 class="slogan">Reliable messaging.</h2>
+            <p class="description">
+              With WhatsApp, you'll get fast, simple, secure messaging and
+              calling for <span>free<sup>*</sup>,</span> available on phones all
+              over the world.
+            </p>
+            <p class="attention">
+              <sup>*</sup> Data charges may apply. Contact your provider for
+              details.
+            </p>
+            <a href="javascript:void(0)" class="get-on-mobile">DOWNLOAD NOW</a>
+            <ul class="get-on-desktop">
+              <li>
+                <a href="javascript:void(0)">
+                  <svg class="os-icon">
+                    <use
+                      xlink:href="./assets/icons/sprites/app-sprites.svg#android"
+                    ></use>
+                  </svg>
+                  Android
+                  <svg class="arrow-right">
+                    <use
+                      xlink:href="./assets/icons/sprites/app-sprites.svg#arrow-right"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg class="os-icon">
+                    <use
+                      xlink:href="./assets/icons/sprites/app-sprites.svg#apple"
+                    ></use>
+                  </svg>
+                  iPhone
+                  <svg class="arrow-right">
+                    <use
+                      xlink:href="./assets/icons/sprites/app-sprites.svg#arrow-right"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg class="os-icon">
+                    <use
+                      xlink:href="./assets/icons/sprites/app-sprites.svg#monitor"
+                    ></use>
+                  </svg>
+                  Mac or Windows PC
+                  <svg class="arrow-right">
+                    <use
+                      xlink:href="./assets/icons/sprites/app-sprites.svg#arrow-right"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </article>
+          <div class="app-intro__banner">
+            <picture>
+              <source
+                srcset="./assets/images/background/intro.png"
+                media="(min-width: 1024px)"
+              />
+              <source
+                srcset="./assets/images/background/intro-767.png"
+                media="(max-width: 767px)"
+              />
+              <img
+                alt="With WhatsApp, you'll get fast, simple, secure messaging and calling for free*, available on phones all over the world."
+                src="./assets/images/background/intro.png"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section class="app-summary">
+        <div class="app-summary__buisness-wrapper">
+          <h1 class="title">WhatsApp Business App</h1>
+          <div class="description-wrapper">
+            <p>
+              <a href="https://business.whatsapp.com/products/business-app">
+                WhatsApp Business
+              </a>
+              is a free to download app that was built with the small business
+              owner in mind. Create a catalog to showcase your products and
+              services. Connect with your customers easily by using tools to
+              automate, sort and quickly respond to messages.
+            </p>
+            <p>
+              WhatsApp can also help medium and large businesses provide
+              customer support and deliver important notifications to customers.
+              Learn more about
+              <a
+                href="https://business.whatsapp.com/products/business-platform"
+              >
+                WhatsApp Business API.
+              </a>
+            </p>
+          </div>
+          <div class="banner-wrapper">
+            <picture>
+              <source
+                srcset="./assets/images/background/summary-1024.png"
+                media="(min-width: 1024px)"
+              />
+              <img
+                alt="WhatsApp Business is a free to download app that was built with the small business owner in mind."
+                src="./assets/images/background/summary.png"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="app-summary__security-wrapper">
+          <div class="banner-wrapper">
+            <img src="./assets/images/whatsapp-security-sticker.png" alt="" />
+          </div>
+          <h3 class="subtitle">END-TO-END ENCRYPTION</h3>
+          <h1 class="title">Security by Default</h1>
+          <div class="description-wrapper">
+            <p>
+              Some of your most personal moments are shared on WhatsApp, which
+              is why we built end-to-end encryption into the latest versions of
+              our app. When end-to-end encrypted, your messages and calls are
+              secured so only you and the person you're communicating with can
+              read or listen to them, and nobody in between, not even WhatsApp.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="app-exploration">
+        <a href="javascript:void(0)">EXPLORE FEATURES</a>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__related-links">
+        <div class="footer__related-links-group">
+          <div class="footer__related-link-group">
+            <h3>WHATSAPP</h3>
+            <a href="javascript:void(0)"><h4>Features</h4></a>
+            <a href="javascript:void(0)"><h4>Security</h4></a>
+            <a href="javascript:void(0)"><h4>Download</h4></a>
+            <a href="javascript:void(0)"><h4>WhatsApp Web</h4></a>
+            <a href="javascript:void(0)"><h4>Business</h4></a>
+            <a href="javascript:void(0)"><h4>Privacy</h4></a>
+          </div>
+          <div class="footer__related-link-group">
+            <h3>COMPANY</h3>
+            <a href="javascript:void(0)"><h4>About</h4></a>
+            <a href="javascript:void(0)"><h4>Download</h4></a>
+            <a href="javascript:void(0)"><h4>Careers</h4></a>
+            <a href="javascript:void(0)"><h4>Brand Center</h4></a>
+            <a href="javascript:void(0)"><h4>Get in touch</h4></a>
+            <a href="javascript:void(0)"><h4>Blog</h4></a>
+            <a href="javascript:void(0)"><h4>WhatsApp Stories</h4></a>
+          </div>
+          <div class="footer__related-link-group">
+            <h3>DOWNLOAD</h3>
+            <a href="javascript:void(0)"><h4>Mac/PC</h4></a>
+            <a href="javascript:void(0)"><h4>Android</h4></a>
+            <a href="javascript:void(0)"><h4>iPhone</h4></a>
+          </div>
+          <div class="footer__related-link-group">
+            <h3>HELP</h3>
+            <a href="javascript:void(0)"><h4>Help Center</h4></a>
+            <a href="javascript:void(0)"><h4>Twitter</h4></a>
+            <a href="javascript:void(0)"><h4>Facebook</h4></a>
+            <a href="javascript:void(0)"><h4>Coronavirus</h4></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__rights">
+        <div class="footer__rights-wrapper">
+          <h4>2022 © WhatsApp LLC</h4>
+          <a href="javascript:void(0)">
+            <h6>Privacy & Terms</h6>
+            <svg class="arrow-right">
+              <use
+                xlink:href="./assets/icons/sprites/app-sprites.svg#arrow-right"
+              ></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
