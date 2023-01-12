@@ -1,0 +1,35 @@
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin attention($self: false) {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+/// Make a context based selector a little more friendly
+/// @param {String} $element
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+/// @param {String} $modifier
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+///BreakPoint - Responsive Design Setup
+@mixin breakpoint($args...) {
+  @if length($args) == 1 {
+    @media only screen and (min-width: nth($args , 1)) {
+      @content;
+    }
+  } @else {
+    @media only screen and (min-width: nth($args , 1)) and (max-width: nth($args , 2)) {
+      @content;
+    }
+  }
+}

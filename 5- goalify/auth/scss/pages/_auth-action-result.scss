@@ -1,0 +1,4 @@
+@use '../utils/variables' as variables;
+.auth-action-message {
+  font: 400 calc(3rem + 1.5vw) variables.$roboto;
+}

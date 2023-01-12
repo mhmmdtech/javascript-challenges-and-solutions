@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/main.css" />
+    <script defer src="./js/utils/helpers.js"></script>
+    <script defer src="./js/components/theme.js"></script>
+  </head>
+  <body
+    class="pos-relative d-flex flex-column align-items-center justify-content-start user-select-none bg-primary"
+  >
+    <header
+      class="w-100 d-flex align-items-center justify-content-center z-100 shadow-bottom app-header"
+    >
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-center app-header__wrapper"
+      >
+        <a
+          href="./index.html"
+          class="d-flex align-items-center justify-content-center text-decoration-none color-primary app-header__brand"
+        >
+          <span>Goalify</span>
+        </a>
+      </div>
+    </header>
+    <main
+      class="d-flex flex-column justify-content-start align-items-center flex-grow-1 app-main"
+    >
+      <section
+        class="w-100 h-100 d-flex flex-column justify-content-center align-items-center flex-grow-1 app-intro"
+      >
+        <h1 class="color-primary text-center text-capitalize app-intro__motto">
+          Easily achieve your goal.
+        </h1>
+        <a
+          href="./dashboard.html"
+          class="text-decoration-none pd-top-half pd-bottom-half pd-left-1 pd-right-1 mg-top-1 text-capitalize color-primary bg-primary shadow shadow--hover app-intro__cta"
+          >Get Started</a
+        >
+      </section>
+    </main>
+  </body>
+</html>

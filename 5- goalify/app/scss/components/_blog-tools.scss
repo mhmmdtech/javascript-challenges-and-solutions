@@ -1,0 +1,16 @@
+@use '../utils/mixins' as mixins;
+@use '../utils/variables' as variables;
+.blog-tools {
+  @include mixins.element(title) {
+    font: 400 calc(1.5rem + 0.75vw) variables.$roboto;
+  }
+  @include mixins.element(link-wrapper) {
+    * + * {
+      margin-left: calc(1rem + 0.5vw);
+    }
+  }
+  @include mixins.element(link) {
+    border-radius: 1rem;
+    font: 400 calc(1rem + 0.5vw) variables.$roboto;
+  }
+}

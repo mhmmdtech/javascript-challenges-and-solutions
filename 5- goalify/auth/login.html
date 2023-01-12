@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/main.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"
+      integrity="sha512-yAr4fN9WZH6hESbOwoFZGtSgOP+LSZbs/JeoDr02pOX4yUFfI++qC9YwIQXIGffhnzliykJtdWTV/v3PxSz8aw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="./js/utils/helpers.js"></script>
+    <script defer src="./js/utils/FormValidation.js"></script>
+    <script defer src="./js/components/password-toggler.js"></script>
+    <script defer src="./js/components/theme.js"></script>
+    <script defer src="./js/pages/login.js"></script>
+  </head>
+  <body
+    class="pos-relative d-flex flex-column align-items-center justify-content-start user-select-none bg-primary"
+  >
+    <header
+      class="w-100 d-flex align-items-center justify-content-center z-100 shadow-bottom app-header"
+    >
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-center app-header__wrapper"
+      >
+        <a
+          href="./index.html"
+          class="d-flex align-items-center justify-content-center text-decoration-none color-primary app-header__brand"
+        >
+          <span>Goalify</span>
+        </a>
+      </div>
+    </header>
+    <main
+      class="d-flex flex-column justify-content-start align-items-center flex-grow-1 app-main"
+    >
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-between w-100 blog-tools"
+      >
+        <h3 class="color-primary text-capitalize mg-top-1 blog-tools__title">
+          Login
+        </h3>
+        <div
+          class="d-flex align-items-center mg-top-1 blog-tools__link-wrapper"
+        >
+          <a
+            href="./home.html"
+            class="pd-top-1 pd-bottom-1 pd-left-1 pd-right-1 text-decoration-none color-primary bg-primary shadow shadow--hover text-capitalize blog-tools__link"
+            >Go to home</a
+          >
+        </div>
+      </div>
+      <section
+        class="w-100 h-100 d-flex justify-content-center align-items-center flex-grow-1"
+      >
+        <form
+          id="login-form"
+          class="w-100 d-flex flex-column mg-top-1 mg-bottom-1 pd-1 shadow shadow--hover auth-form"
+          novalidate
+        >
+          <div class="text-center auth-form__entire-error hide">
+            <span>&nbsp;</span>
+          </div>
+          <div
+            class="d-flex flex-column mg-top-1 auth-form__input-group"
+            data-input-group
+          >
+            <label
+              class="text-capitalize mg-bottom-half mg-left-half color-primary auth-form__label"
+              for="email"
+              >Email</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Write Your Email"
+              class="w-100 outline-0 border-0 pd-half shadow shadow--hover color-primary bg-primary auth-form__input"
+            />
+            <div
+              class="mg-top-half mg-left-half error auth-form__error hide"
+              data-input-error
+            >
+              <span>&nbsp;</span>
+            </div>
+          </div>
+          <div
+            class="d-flex flex-column mg-top-1 pos-relative auth-form__input-group"
+            data-input-group
+          >
+            <label
+              class="text-capitalize mg-bottom-half mg-left-half color-primary auth-form__label"
+              for="password"
+              >Password</label
+            >
+            <div
+              class="cursor-pointer pos-absolute auth-form__password-toggler"
+              data-password-toggler
+            ></div>
+
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Write Your Password"
+              class="w-100 outline-0 border-0 pd-half shadow shadow--hover color-primary bg-primary auth-form__input"
+            />
+            <div
+              class="mg-top-half mg-left-half error auth-form__error hide"
+              data-input-error
+            >
+              <span>&nbsp;</span>
+            </div>
+          </div>
+          <div class="d-flex flex-column mg-top-1 auth-form__input-group">
+            <button
+              type="submit"
+              class="w-100 cursor-pointer border-0 outline-0 pd-top-1 pd-bottom-1 pd-left-1 pd-right-1 color-primary bg-primary shadow shadow--hover auth-form__submit"
+            >
+              Submit
+            </button>
+            <p
+              class="mg-top-1 text-center color-primary auth-form__additional-text"
+            >
+              Haven't you registered yet? Please
+              <a href="#" class="sky-blue">register here</a>
+            </p>
+            <p
+              class="mg-top-1 text-center color-primary auth-form__additional-text"
+            >
+              Did you forget your password?
+              <a href="#" class="sky-blue">Reset it here</a>
+            </p>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

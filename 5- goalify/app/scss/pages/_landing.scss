@@ -1,0 +1,12 @@
+@use '../utils/variables' as variables;
+@use '../utils/extends';
+@use '../utils/mixins' as mixins;
+.app-intro {
+  @include mixins.element(motto) {
+    font: 400 calc(3rem + 1.5vw) variables.$roboto;
+  }
+  @include mixins.element(cta) {
+    font: 400 calc(1.5rem + 0.75vw) variables.$roboto;
+    border-radius: 1rem;
+  }
+}

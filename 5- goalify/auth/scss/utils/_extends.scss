@@ -1,0 +1,15 @@
+@use './mixins' as mixins;
+%app-header-height {
+  min-height: 50px;
+  @include mixins.breakpoint(1400px) {
+    min-height: 70px;
+  }
+}
+%app-body-width {
+  max-width: 100%;
+  width: 90%;
+  @include mixins.breakpoint(1400px) {
+    max-width: 1200px;
+    width: 100%;
+  }
+}
