@@ -1,0 +1,31 @@
+{
+  "name": "adify",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "watch:scss": "sass --watch --update scss:style",
+    "build:scss": "sass --no-source-map scss:style",
+    "css:prefix": "postcss --use autoprefixer --replace style/main.css",
+    "css:minify": "postcss --use cssnano --replace style/main.css",
+    "build:css": "npm-run-all build:scss css:prefix css:minify",
+    "clean": "rimraf style/*",
+    "serve": "browser-sync start --server --files \"style/*, js/**/, *.html, !node_modules/**/*.html\"",
+    "build:dev": "npm-run-all --sequential clean  watch:scss",
+    "build:prod": "npm-run-all --sequential clean build:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "browser-sync": "^2.27.10",
+    "browserslist": "^4.21.1",
+    "cssnano": "^5.1.12",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.53.0"
+  },
+  "dependencies": {}
+}

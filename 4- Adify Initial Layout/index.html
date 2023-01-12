@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لیست شغل‌های موجود</title>
+    <link rel="stylesheet" href="./style/main.css" />
+    <script defer src="./js/utils/helpers.js"></script>
+    <script defer src="./js/components/theme.js"></script>
+  </head>
+  <body
+    class="pos-relative d-flex flex-column align-items-center justify-content-start bg-primary"
+  >
+    <header
+      class="w-100 d-flex align-items-center justify-content-center z-90 shadow-bottom app-header"
+    >
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-center app-header__wrapper"
+      >
+        <a
+          href="./index.html"
+          class="d-flex align-items-center justify-content-center text-decoration-none color-primary app-header__brand"
+        >
+          <span>پلتفرم انتشار کار</span>
+        </a>
+      </div>
+    </header>
+    <main
+      class="d-flex flex-column justify-content-start align-items-center flex-grow-1 app-main"
+    >
+      <div
+        class="d-flex flex-row-reverse flex-wrap align-items-center justify-content-between w-100 head-tools"
+      >
+        <h3 class="color-primary text-capitalize mg-top-1 head-tools__title">
+          لیست تمامی درخواست‌ها
+        </h3>
+        <div
+          class="d-flex align-items-center flex-wrap head-tools__link-wrapper"
+        >
+          <button
+            type="button"
+            class="pd-1 border-0 outline-0 cursor-pointer color-primary bg-primary mg-top-1 shadow shadow--hover text-capitalize head-tools__link"
+            data-theme-toggler="dark"
+          >
+            تم تیره
+          </button>
+          <button
+            type="button"
+            class="pd-1 border-0 outline-0 cursor-pointer color-primary bg-primary mg-top-1 shadow shadow--hover text-capitalize head-tools__link"
+            data-theme-toggler="light"
+          >
+            تم روشن
+          </button>
+          <a
+            href="./create.html"
+            class="pd-1 border-0 outline-0 text-decoration-none color-primary bg-primary mg-top-1 shadow shadow--hover text-capitalize head-tools__link"
+            >ایجاد درخواست جدید</a
+          >
+        </div>
+      </div>
+      <section class="w-100 mg-top-1 overflow-x job-ads">
+        <table
+          class="table-layout-fixed w-100 border-collapse color-primary ads-table"
+          id="ads__table"
+        >
+          <thead>
+            <th
+              scope="col"
+              class="text-center border-color-primary pd-half ads-table__cell"
+            >
+              #
+            </th>
+            <th
+              scope="col"
+              class="text-center border-color-primary pd-half ads-table__cell"
+            >
+              نام شرکت
+            </th>
+            <th
+              scope="col"
+              class="text-center border-color-primary pd-half ads-table__cell"
+            >
+              عنوان شغلی
+            </th>
+            <th
+              scope="col"
+              class="text-center border-color-primary pd-half ads-table__cell"
+            >
+              میزان حقوق
+            </th>
+            <th
+              scope="col"
+              class="text-center border-color-primary pd-half ads-table__cell"
+            >
+              نوع همکاری
+            </th>
+            <th
+              scope="col"
+              class="text-center border-color-primary pd-half ads-table__cell"
+            >
+              محل کار
+            </th>
+            <th
+              scope="col"
+              class="text-center border-color-primary pd-half ads-table__cell"
+            >
+              وضعیت انتشار
+            </th>
+            <th
+              scope="col"
+              class="text-center border-color-primary pd-half ads-table__cell"
+            >
+              درجه ارشدیت
+            </th>
+            <th
+              scope="col"
+              class="text-center border-color-primary pd-half ads-table__cell"
+            >
+              تاریخ ایجاد در پلتفرم
+            </th>
+            <th
+              scope="col"
+              class="text-center border-color-primary ads-table__cell"
+            >
+              عملیات
+            </th>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                scope="row"
+                class="text-center border-color-primary pd-half ads-table__cell"
+              >
+                9999
+              </td>
+              <td
+                class="text-center border-color-primary pd-half ads-table__cell"
+              >
+                زرین‌پال
+              </td>
+              <td
+                class="text-center border-color-primary pd-half ads-table__cell"
+              >
+                توسعه‌دهنده فرانت‌اند
+              </td>
+              <td
+                class="text-center border-color-primary pd-half ads-table__cell"
+              >
+                کمتر از ۱۰ میلیون تومان
+              </td>
+              <td
+                class="text-center border-color-primary pd-half ads-table__cell"
+              >
+                دورکاری
+              </td>
+              <td
+                class="text-center border-color-primary pd-half ads-table__cell"
+              >
+                تهران
+              </td>
+              <td
+                class="text-center border-color-primary pd-half ads-table__cell"
+              >
+                انتشار یافته
+              </td>
+              <td
+                class="text-center border-color-primary pd-half ads-table__cell"
+              >
+                میانی
+              </td>
+              <td
+                class="text-center border-color-primary pd-half ads-table__cell"
+              >
+                پنج‌شنبه, 14 مهر 1401
+              </td>
+              <td
+                class="text-center border-color-primary pd-half ads-table__cell"
+              >
+                <a
+                  href="#"
+                  class="d-inline-block pd-half mg-half text-decoration-none color-primary border-0 outline-0 bg-primary shadow shadow--hover"
+                  >نمایش</a
+                >
+                <a
+                  href="#"
+                  class="d-inline-block pd-half mg-half text-decoration-none color-primary border-0 outline-0 bg-primary shadow shadow--hover"
+                  >ویرایش</a
+                >
+                <form style="display: inline" method="post" action="">
+                  <button
+                    type="submit"
+                    class="pd-half mg-half color-primary border-0 outline-0 bg-primary shadow shadow--hover cursor-pointer bg-transparent"
+                  >
+                    حذف
+                  </button>
+                </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

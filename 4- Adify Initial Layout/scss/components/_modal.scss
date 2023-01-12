@@ -1,0 +1,31 @@
+@use '../utils/mixins' as mixins;
+@use '../utils/helpers';
+@use '../utils/variables' as variables;
+
+.modal {
+  @include mixins.element(backdrop) {
+    height: 100vh;
+    @extend .hide;
+    transition: opacity 250ms ease-in, visibility 0ms ease-in 250ms;
+    &.show {
+      @extend .show;
+      transition: opacity 250ms ease-in, visibility 0ms ease-in 0ms;
+    }
+  }
+  @include mixins.element(wrapper) {
+    min-width: 320px;
+    border-radius: 1rem;
+    max-height: 90%;
+    overflow: auto;
+    @include mixins.breakpoint(576px) {
+      width: 576px;
+    }
+    @include mixins.breakpoint(768px) {
+      width: 768px;
+    }
+  }
+  @include mixins.element(header) {
+    font: 400 calc(1.5rem + 0.5vw) variables.$roboto;
+    line-height: calc((1.5rem + 0.5vw) * 1.5);
+  }
+}

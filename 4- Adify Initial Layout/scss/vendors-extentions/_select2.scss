@@ -1,0 +1,88 @@
+@use '../themes';
+@use '../utils/variables' as variables;
+@use '../utils/mixins' as mixins;
+
+.select2__dropdown-custom-style {
+  @extend .bg-primary;
+  @extend .color-primary;
+  @extend .shadow;
+  @extend .shadow--hover;
+  font: 400 calc(1rem + 0.5vw) variables.$roboto !important;
+  line-height: calc((1rem + 0.5vw) * 1.5) !important;
+  border-radius: 1rem !important;
+}
+.select2-search {
+  padding: calc((1rem + 0.5vw) / 2) !important;
+  @include mixins.element(field) {
+    @extend .bg-primary;
+    @extend .color-primary;
+    @extend .shadow;
+    @extend .shadow--hover;
+    border: 0 !important;
+    outline: 0 !important;
+    padding: calc((1rem + 0.5vw) / 2) !important;
+    font: 400 calc(1rem + 0.5vw) variables.$roboto !important;
+    line-height: calc((1rem + 0.5vw) * 1.5) !important;
+    border-radius: 1rem !important;
+  }
+}
+.select2-container--open .select2-dropdown--below {
+  border-radius: 1rem !important;
+}
+.select2-selection {
+  @include mixins.modifier(single) {
+    outline: 0 !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    height: unset !important;
+  }
+  @include mixins.element(arrow) {
+    display: none !important;
+  }
+  @include mixins.element(rendered) {
+    @extend .color-primary;
+    padding: calc((1rem + 0.5vw) / 2) !important;
+    font: 400 calc(1rem + 0.5vw) variables.$roboto !important;
+    line-height: calc((1rem + 0.5vw) * 1.5) !important;
+  }
+}
+.select2-results {
+  @include mixins.element(option) {
+    @include mixins.modifier(selected) {
+      @extend .bg-primary;
+      @extend .shadow;
+    }
+  }
+}
+.select2-results__option--highlighted.select2-results__option--selectable {
+  @extend .bg-primary;
+  @extend .shadow;
+  @extend .shadow--hover;
+  @extend .color-primary;
+}
+.select2-container .select2-selection--multiple {
+  min-height: unset;
+  padding: calc((1rem + 0.5vw) / 2) !important;
+  border-radius: 1rem !important;
+  border: 0 !important;
+  overflow: hidden;
+  @extend .bg-primary;
+  @extend .color-primary;
+  .select2-search {
+    padding: 0 !important;
+  }
+  .select2-search__field {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transition: none !important;
+    vertical-align: middle !important;
+    height: 22px !important;
+  }
+  .select2-selection__choice {
+    margin-top: 0;
+    vertical-align: middle !important;
+  }
+}

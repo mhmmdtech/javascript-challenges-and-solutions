@@ -1,0 +1,8 @@
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 512 512" id="add">
+    <g xmlns="http://www.w3.org/2000/svg">
+      <path d="M256 512a25 25 0 0 1-25-25V25a25 25 0 0 1 50 0v462a25 25 0 0 1-25 25z" data-original="#000000"></path>
+      <path d="M487 281H25a25 25 0 0 1 0-50h462a25 25 0 0 1 0 50z" data-original="#000000"></path>
+    </g>
+  </symbol>
+</svg>

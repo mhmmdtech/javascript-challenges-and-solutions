@@ -1,0 +1,16 @@
+@use '../utils/mixins' as mixins;
+@use '../utils/variables' as variables;
+.head-tools {
+  @include mixins.element(title) {
+    font: 400 calc(1.5rem + 0.5vw) variables.$roboto;
+  }
+  @include mixins.element(link-wrapper) {
+    * + * {
+      margin-inline-start: calc(1rem + 0.5vw);
+    }
+  }
+  @include mixins.element(link) {
+    border-radius: 1rem;
+    font: 400 calc(1rem + 0.5vw) variables.$roboto;
+  }
+}

@@ -1,0 +1,27 @@
+@use '../utils/mixins' as mixins;
+@use '../utils/variables' as variables;
+.job-blog {
+  max-width: 1200px;
+  @include mixins.element(title) {
+    font: 400 calc(2rem + 0.5vw) variables.$roboto;
+    line-height: calc((2rem + 0.5vw) * 1.5);
+  }
+  @include mixins.element(text) {
+    font: 400 calc(1rem + 0.5vw) variables.$roboto;
+    line-height: calc((1rem + 0.5vw) * 1.5);
+  }
+
+  @include mixins.element(detail-item) {
+    font: 400 calc(1rem + 0.5vw) variables.$roboto;
+    line-height: calc((1rem + 0.5vw) * 1.5);
+    width: 50%;
+  }
+  @include mixins.element(subtitle) {
+    font: 400 calc(1.5rem + 0.5vw) variables.$roboto;
+    line-height: calc((1.5rem + 0.5vw) * 1.5);
+  }
+  @include mixins.element(notices) {
+    font: 400 calc(1rem + 0.5vw) variables.$roboto;
+    line-height: calc((1rem + 0.5vw) * 1.5);
+  }
+}
