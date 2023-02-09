@@ -1,9 +1,0 @@
-@use '../utils/variables' as variables;
-@use '../utils/extends';
-@use '../utils/mixins' as mixins;
-body {
-  min-height: 100vh;
-}
-.app-main {
-  @extend %app-body-width;
-}
